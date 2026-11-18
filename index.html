@@ -1,33 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filterable Image Gallery</title>
+    <title>Curated Product Gallery | Portfolio Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="buttons">
-            <button>All</button>
-            <button>Watch</button>
-            <button>Sneakers</button>
-            <button>Jewellery</button>
+    <header class="gallery-header">
+        <span class="badge">Collection Showcase</span>
+        <h1>Curated Lifestyle Gallery</h1>
+        <p>Explore our handpicked selection of luxury watches, modern sneakers, and fine jewellery.</p>
+    </header>
+
+    <main class="container">
+        <!-- Filter Controls -->
+        <div class="filter-buttons" role="tablist" aria-label="Gallery Categories">
+            <button class="filter-btn active" data-filter="all">All Items</button>
+            <button class="filter-btn" data-filter="Watch">Watches</button>
+            <button class="filter-btn" data-filter="Sneakers">Sneakers</button>
+            <button class="filter-btn" data-filter="Jewellery">Jewellery</button>
         </div>
+
+        <!-- Gallery Grid -->
         <div class="image-container">
-            <img src="images/j1.jpg" alt="" data-fliter="Jewellery">
-            <img src="images/s1.jpg" alt="" data-fliter="Sneakers">
-            <img src="images/w1.jpg" alt="" data-fliter="Watch">
-            <img src="images/w2.jpg" alt="" data-fliter="Watch">
-            <img src="images/s2.jpg" alt="" data-fliter="Sneakers">
-            <img src="images/j2.jpg" alt="" data-fliter="Jewellery">
-            <img src="images/s3.jpg" alt="" data-fliter="Sneakers">
-            <img src="images/j3.jpg" alt="" data-fliter="Jewellery"> 
-            <img src="images/w3.jpg" alt="" data-fliter="Watch">
-            <img src="images/j4.jpg" alt="" data-fliter="Jewellery">
-            <img src="images/s4.jpg" alt="" data-fliter="Sneakers">
-            <img src="images/w4.jpg" alt="" data-fliter="Watch">
+            <div class="gallery-card" data-category="Jewellery">
+                <img src="j1.jpg" alt="Fine Jewellery Piece 1" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Jewellery</span>
+                    <h3>Signature Gold Accent</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Sneakers">
+                <img src="s1.jpg" alt="Modern Sneakers 1" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Sneakers</span>
+                    <h3>Urban Street Runner</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Watch">
+                <img src="w1.jpg" alt="Luxury Watch 1" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Watch</span>
+                    <h3>Classic Chronograph</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Watch">
+                <img src="w2.jpg" alt="Luxury Watch 2" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Watch</span>
+                    <h3>Minimalist Dial Edition</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Sneakers">
+                <img src="s2.jpg" alt="Modern Sneakers 2" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Sneakers</span>
+                    <h3>Aero Court Low</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Jewellery">
+                <img src="j2.jpg" alt="Fine Jewellery Piece 2" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Jewellery</span>
+                    <h3>Royal Heritage Ring</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Sneakers">
+                <img src="s3.jpg" alt="Modern Sneakers 3" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Sneakers</span>
+                    <h3>Velocity High-Top</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Jewellery">
+                <img src="j3.jpg" alt="Fine Jewellery Piece 3" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Jewellery</span>
+                    <h3>Diamond Pendant Set</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Watch">
+                <img src="w3.jpg" alt="Luxury Watch 3" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Watch</span>
+                    <h3>Midnight Steel Series</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Jewellery">
+                <img src="j4.jpg" alt="Fine Jewellery Piece 4" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Jewellery</span>
+                    <h3>Artisan Cuff Bracelet</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Sneakers">
+                <img src="s4.jpg" alt="Modern Sneakers 4" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Sneakers</span>
+                    <h3>Studio Monochrome</h3>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="Watch">
+                <img src="w4.jpg" alt="Luxury Watch 4" loading="lazy">
+                <div class="card-overlay">
+                    <span class="category-tag">Watch</span>
+                    <h3>Executive Leather Strap</h3>
+                </div>
+            </div>
         </div>
-      </div>
-      <script src="script.js"></script>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close Preview">&times;</button>
+        <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous Image">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Expanded Preview">
+            <div class="lightbox-caption">
+                <span id="lightboxCategory"></span>
+                <h4 id="lightboxTitle"></h4>
+            </div>
+        </div>
+        <button class="lightbox-nav next" id="lightboxNext" aria-label="Next Image">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
